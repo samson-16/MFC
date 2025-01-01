@@ -7,7 +7,7 @@ import WhyChooseMFCs from "./Whychoose";
 import OrderNow from "./Order";
 import Footer from "../../components/Footer";
 import FAQSection from "./FAQ";
-import Typical from "react-typical";
+import TypingAnimation from "./Typeanimation";
 
 
 
@@ -42,21 +42,7 @@ const Home = () => {
                             through cutting-edge microbial fuel cell technology.
                         </motion.p>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1.5 }}
-                            className="text-lg md:text-[40px] text-[#318078] font-extrabold mt-8 max-w-2xl"
-                        >
-                            <Typical
-                                steps={[
-                                    "From Our Store to Your Door", 2000, // Display for 2 seconds
-                                    "Fast, Reliable, and Sustainable", 2000, // Display for 2 seconds
-                                ]}
-                                loop={Infinity} // Infinite loop
-                                wrapper="p" // The HTML tag used to wrap the animation
-                            />
-                        </motion.div>
+                       <TypingAnimation/>
                         <div className="mt-16">
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
