@@ -1,11 +1,11 @@
 import StickyNavbar from "../../components/Navbar";
 
-import React from "react";
 import Benefits from "./Benefits";
 import Applications from "./Application";
 import FutureOfMFCs from "./FutureOfMfc";
 import Team from "./TeamMem";
-
+import Footer from "../../components/Footer";
+import download from "../../assets/images/download.png"
 const About = () => {
   return (
     // About Section
@@ -34,7 +34,7 @@ const About = () => {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     {/* Text Content */}
     <div className="text-gray-700 text-lg leading-relaxed">
-      <h2 className="text-2xl font-bold text-blue-600 mb-4">
+      <h2 className="text-2xl font-bold text-[#318078] mb-4">
         What are Microbial Fuel Cells?
       </h2>
       <p>
@@ -53,7 +53,7 @@ const About = () => {
     {/* Image Section */}
     <div>
       <img
-        src="https://via.placeholder.com/600x400"
+        src={download}
         alt="Microbial Fuel Cell Technology"
         className="w-full h-auto rounded-lg shadow-lg"
       />
@@ -67,10 +67,10 @@ const About = () => {
 
   {/* Call to Action */}
   <div className="mt-12 text-center">
-    <h3 className="text-xl font-bold text-blue-700 mb-4">
+    <h3 className="text-xl font-bold text-[#29615a] mb-4">
       Want to Learn More or Place an Order?
     </h3>
-    <button className="px-8 py-3 bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:bg-blue-800 transition">
+    <button className="px-8 py-3 mt-6 bg-[#29615a] text-white font-semibold rounded-lg shadow-md hover:bg-[#98f0e6] transition">
       Explore Products
     </button>
   </div>
@@ -87,8 +87,11 @@ const About = () => {
 
   {/* Team Members Section */}
   <Team/>
+
 </div>
 </div>
+<Footer/>
+
    </div>
   );
 };

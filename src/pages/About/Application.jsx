@@ -5,7 +5,7 @@ import { FaIndustry, FaBuilding, FaFlask } from "react-icons/fa";
 const Applications = () => {
   const applications = [
     {
-      icon: <FaIndustry size={40} className="text-blue-500 mb-4" />,
+      icon: <FaIndustry size={50} className="text-blue-500 mb-4" />,
       title: "Industrial Waste Management",
       description: `
         MFCs are used in industries to treat organic waste while generating electricity. 
@@ -13,7 +13,7 @@ const Applications = () => {
       `,
     },
     {
-      icon: <FaBuilding size={40} className="text-green-500 mb-4" />,
+      icon: <FaBuilding size={50} className="text-green-500 mb-4" />,
       title: "Urban Water Treatment",
       description: `
         MFCs are applied in urban wastewater treatment plants to clean water and recover energy, 
@@ -21,7 +21,7 @@ const Applications = () => {
       `,
     },
     {
-      icon: <FaFlask size={40} className="text-yellow-500 mb-4" />,
+      icon: <FaFlask size={50} className="text-yellow-500 mb-4" />,
       title: "Research and Innovation",
       description: `
         Researchers are exploring MFCs for advanced applications, including powering small devices 
@@ -34,7 +34,7 @@ const Applications = () => {
     <div className="py-16 bg-white">
       <div className="container mx-auto px-6 lg:px-20 text-center">
         <motion.h2
-          className="text-4xl font-bold text-blue-700 mb-8"
+        className="text-4xl font-bold text-[#3aa699] mb-8"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -46,21 +46,23 @@ const Applications = () => {
           Microbial Fuel Cells are transforming multiple industries by offering innovative solutions for 
           energy generation and resource recovery. Here are some of the key applications.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {applications.map((application, index) => (
             <motion.div
               key={index}
-              className="p-6 bg-gray-100 shadow-lg rounded-lg text-center transform hover:scale-105 transition duration-300"
+              className="p-8 bg-gray-100 shadow-lg rounded-lg text-center transform transition duration-300 hover:scale-105 hover:bg-[#29615a] hover:text-white"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: index * 0.3 }}
             >
               {application.icon}
-              <h3 className="text-xl font-semibold text-blue-600 mb-2">
+              <h3 className="text-2xl font-semibold text-blue-600 mb-3 hover:text-white">
                 {application.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{application.description}</p>
+              <p className="text-gray-600 leading-relaxed hover:text-gray-200">
+                {application.description}
+              </p>
             </motion.div>
           ))}
         </div>

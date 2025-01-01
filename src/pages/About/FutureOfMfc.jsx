@@ -1,5 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
+import Creativity from "../../assets/images/Creativity.gif";
+
 
 const FutureOfMFCs = () => {
   const fadeInFromLeft = {
@@ -22,7 +23,7 @@ const FutureOfMFCs = () => {
           viewport={{ once: true }}
           variants={fadeInFromLeft}
         >
-          <h2 className="text-4xl font-bold text-blue-700">
+          <h2 className="text-4xl font-bold text-[#29615a]">
             The Future of Microbial Fuel Cells
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">
@@ -41,7 +42,7 @@ const FutureOfMFCs = () => {
             viewport={{ once: true }}
             variants={fadeInFromLeft}
           >
-            <h3 className="text-2xl font-semibold text-blue-600 mb-4">
+            <h3 className="text-2xl font-semibold text-[#29615a] mb-4">
               A Vision for Tomorrow
             </h3>
             <p>
@@ -67,7 +68,7 @@ const FutureOfMFCs = () => {
             variants={fadeInFromRight}
           >
             <img
-              src="https://via.placeholder.com/600x400"
+              src={Creativity}
               alt="Future of MFCs"
               className="rounded-lg shadow-lg"
             />

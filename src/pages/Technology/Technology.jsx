@@ -1,7 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
-
+import Footer from "../../components/Footer";
+import ManThink from '../../assets/images/man thinking-bro.png'
+import { FaWater, FaBatteryFull, FaGlobe, FaBook } from "react-icons/fa";
 const TechnologyPage = () => {
   return (
      <div>
@@ -10,32 +11,47 @@ const TechnologyPage = () => {
         </div>
         <div className="bg-gray-100 py-16">
       {/* Page Header */}
-      <div className="text-center px-6">
-        <motion.h1
-          className="text-4xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Explore Microbial Fuel Cell (MFC) Technology
-        </motion.h1>
-        <motion.p
-          className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          Dive into the fascinating world of Microbial Fuel Cells, where biology
-          meets innovation to revolutionize energy production and waste
-          management.
-        </motion.p>
-      </div>
+    {/* Explore Section */}
+<div className="bg-gradient-to-r from-green-200 via-green-300 to-blue-200 py-20 relative overflow-hidden">
+  {/* Decorative Background Overlay */}
+  <div className="absolute inset-0 opacity-20">
+    <svg
+      className="w-full h-full"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 800 400"
+    >
+      <circle cx="200" cy="200" r="300" fill="rgba(255, 255, 255, 0.3)" />
+      <circle cx="600" cy="150" r="250" fill="rgba(255, 255, 255, 0.15)" />
+    </svg>
+  </div>
+  
+  <div className="relative text-center px-6">
+    <motion.h1
+      className="text-5xl font-extrabold text-gray-800"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      Explore Microbial Fuel Cell (MFC) Technology
+    </motion.h1>
+    <motion.p
+      className="mt-6 text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+    >
+      Dive into the fascinating world of Microbial Fuel Cells, where biology meets innovation to revolutionize energy production and waste management.
+    </motion.p>
+   
+  </div>
+</div>
+
 
       
       {/* Section 2: How MFCs Work */}
 <div className="mt-16 bg-white py-12 px-6 lg:px-20">
   <motion.h2
-    className="text-3xl font-bold text-gray-800"
+    className="text-3xl font-bold text-[#318078] text-center"
     initial={{ opacity: 0, y: -50 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -54,7 +70,7 @@ const TechnologyPage = () => {
   </motion.p>
   <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
     <motion.img
-      src="https://via.placeholder.com/500"
+      src={ManThink}
       alt="MFC Diagram"
       className="rounded-lg shadow-lg"
       initial={{ opacity: 0 }}
@@ -63,7 +79,7 @@ const TechnologyPage = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     />
     <motion.p
-      className="text-gray-600 text-lg leading-relaxed"
+      className="text-[#318078] text-lg  font-bold leading-relaxed"
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
@@ -75,55 +91,117 @@ const TechnologyPage = () => {
 </div>
 
 
-      {/* Section 3: Applications */}
-      <div className="mt-16 py-12 px-6 lg:px-20">
-        <motion.h2
-          className="text-3xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Applications of Microbial Fuel Cells
-        </motion.h2>
-        <motion.ul
-          className="mt-4 list-disc list-inside text-gray-600 text-lg"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <li>Wastewater treatment and energy recovery.</li>
-          <li>Powering small, remote sensors and devices.</li>
-          <li>Environmental monitoring and biosensors.</li>
-          <li>Educational and research purposes.</li>
-        </motion.ul>
-      </div>
+   {/* Section 3: Applications */}
 
-      {/* Section 4: Advantages */}
-      <div className="mt-16 bg-green-100 py-12 px-6 lg:px-20">
-        <motion.h2
-          className="text-3xl font-bold text-gray-800"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Why Choose Microbial Fuel Cells?
-        </motion.h2>
-        <motion.ul
-          className="mt-4 list-disc list-inside text-gray-600 text-lg"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <li>Sustainable and renewable energy source.</li>
-          <li>Reduces dependency on fossil fuels.</li>
-          <li>Dual benefits of energy generation and waste management.</li>
-          <li>Low operational costs and minimal maintenance.</li>
-        </motion.ul>
-      </div>
+
+{/* Section 3: Applications */}
+<div className="mt-16 py-16 px-6 lg:px-24 bg-gray-50">
+  <motion.h2
+    className="text-4xl font-bold text-gray-800 text-center"
+    initial={{ opacity: 0, y: -50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    Applications of Microbial Fuel Cells
+  </motion.h2>
+  <motion.p
+    className="mt-4 text-gray-600 text-center text-lg max-w-2xl mx-auto"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+  >
+    Discover the impactful ways Microbial Fuel Cells contribute to sustainability and innovation.
+  </motion.p>
+  <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+    {[
+      {
+        icon: <FaWater className="text-5xl text-green-500" />,
+        title: "Wastewater Treatment",
+        detail:
+          "Microbial Fuel Cells process wastewater, recovering energy while reducing pollutants. They provide a sustainable solution for waste management in urban and industrial settings.",
+      },
+      {
+        icon: <FaBatteryFull className="text-5xl text-green-500" />,
+        title: "Powering Devices",
+        detail:
+          "Perfect for powering small, remote sensors and devices. Their ability to operate in isolated areas makes them ideal for low-energy IoT solutions and environmental devices.",
+      },
+      {
+        icon: <FaGlobe className="text-5xl text-green-500" />,
+        title: "Environmental Monitoring",
+        detail:
+          "Used as biosensors, they monitor environmental conditions by generating electrical signals in response to specific contaminants in the surroundings.",
+      },
+      {
+        icon: <FaBook className="text-5xl text-green-500" />,
+        title: "Education & Research",
+        detail:
+          "Widely used in educational and research labs to teach renewable energy concepts, innovate sustainable technologies, and inspire the next generation of engineers.",
+      },
+    ].map((item, index) => (
+      <motion.div
+        key={index}
+        className="bg-white shadow-md rounded-lg p-6 flex flex-col items-start hover:scale-105 transition-transform duration-300"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+      >
+        <div>{item.icon}</div>
+        <h3 className="mt-4 text-xl font-bold text-gray-800">{item.title}</h3>
+        <p className="mt-2 text-gray-600 text-sm">{item.detail}</p>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
+
+
+     {/* Section 4: Advantages */}
+<div className="mt-16 bg-green-100 py-16 px-6 lg:px-24">
+  <motion.h2
+    className="text-4xl font-bold text-gray-800 text-center"
+    initial={{ opacity: 0, y: -50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    Why Choose Microbial Fuel Cells?
+  </motion.h2>
+  <motion.p
+    className="mt-4 text-gray-700 text-center text-lg max-w-2xl mx-auto"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+  >
+    Unlock the potential of sustainable energy while contributing to waste management solutions.
+  </motion.p>
+  <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+    {[
+      "Sustainable and renewable energy source.",
+      "Reduces dependency on fossil fuels.",
+      "Dual benefits of energy generation and waste management.",
+      "Low operational costs and minimal maintenance.",
+    ].map((advantage, index) => (
+      <motion.div
+        key={index}
+        className="bg-white shadow-lg rounded-lg p-6 flex items-center space-x-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+      >
+        <div className="h-10 w-10 bg-green-500 text-white rounded-full flex items-center justify-center font-bold">
+          {index + 1}
+        </div>
+        <p className="text-gray-700 text-lg">{advantage}</p>
+      </motion.div>
+    ))}
+  </div>
+</div>
 
       <section className="mt-16 px-6 lg:px-20">
   <motion.div
@@ -275,6 +353,7 @@ const TechnologyPage = () => {
         </motion.button>
       </div>
     </div>
+      <Footer/>
      </div>
   );
 };

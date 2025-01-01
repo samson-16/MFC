@@ -6,13 +6,16 @@ import StickyNavbar from "../../components/Navbar";
 import WhyChooseMFCs from "./Whychoose";
 import OrderNow from "./Order";
 import Footer from "../../components/Footer";
+import FAQSection from "./FAQ";
+import Typical from "react-typical";
+
 
 
 const Home = () => {
     return (
         <div className="w-full">
             <div className="sticky top-0 z-10 w-full">
-            <StickyNavbar/>
+                <StickyNavbar />
             </div>
             <div>
                 <div className="relative h-screen bg-gradient-to-br from-blue-700 via-green-400 to-blue-300">
@@ -38,56 +41,73 @@ const Home = () => {
                             Transforming organic waste into renewable energy and purified water
                             through cutting-edge microbial fuel cell technology.
                         </motion.p>
-                       <div className="mt-16">
-                       <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            className="mt-6 px-6 py-4 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-200"
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5 }}
+                            className="text-lg md:text-[40px] text-[#318078] font-extrabold mt-8 max-w-2xl"
                         >
-                            Learn More
-                        </motion.button>
-                       </div>
+                            <Typical
+                                steps={[
+                                    "From Our Store to Your Door", 2000, // Display for 2 seconds
+                                    "Fast, Reliable, and Sustainable", 2000, // Display for 2 seconds
+                                ]}
+                                loop={Infinity} // Infinite loop
+                                wrapper="p" // The HTML tag used to wrap the animation
+                            />
+                        </motion.div>
+                        <div className="mt-16">
+                            <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                className="mt-6 px-6 py-4 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-200"
+                            >
+                                Learn More
+                            </motion.button>
+                        </div>
                     </div>
                 </div>
             </div>
-                   {/* About Section */}
-                   <div className="py-16 bg-gradient-to-r from-green-100 to-blue-50 text-center">
-  <div className="max-w-4xl mx-auto px-6">
-    <h2 className="text-4xl font-extrabold text-blue-700 mb-6">
-      What are Microbial Fuel Cells?
-    </h2>
-    <p className="text-lg text-gray-700 leading-relaxed">
-      Microbial Fuel Cells (MFCs) represent a groundbreaking clean energy technology 
-      that uses natural biological processes to generate electricity from organic waste.
-      These systems not only provide renewable energy but also purify wastewater, 
-      offering a dual benefit for the environment and energy sectors.
-    </p>
-    <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-      By harnessing the power of microorganisms, MFCs create sustainable solutions 
-      to global challenges, reducing pollution, conserving resources, 
-      and paving the way for a greener future.
-    </p>
-     <div  className="mt-8">
-     <button className="mt-8 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-      Learn More
-    </button>
-     </div>
-  </div>
-</div>
-       {/* why */}
-     
-    
-
-           <WhyChooseMFCs/>
-
-          {/* team section */}
+            {/* About Section */}
+            <div className="py-16 bg-gradient-to-r from-green-100 to-blue-50 text-center">
+                <div className="max-w-4xl mx-auto px-6">
+                    <h2 className="text-4xl font-extrabold text-blue-700 mb-6">
+                        What are Microbial Fuel Cells?
+                    </h2>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                        Microbial Fuel Cells (MFCs) represent a groundbreaking clean energy technology
+                        that uses natural biological processes to generate electricity from organic waste.
+                        These systems not only provide renewable energy but also purify wastewater,
+                        offering a dual benefit for the environment and energy sectors.
+                    </p>
+                    <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+                        By harnessing the power of microorganisms, MFCs create sustainable solutions
+                        to global challenges, reducing pollution, conserving resources,
+                        and paving the way for a greener future.
+                    </p>
+                    <div className="mt-8">
+                        <button className="mt-8 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {/* why */}
 
 
-               {/* <Objectives/> */}
-             {/* <Benefits/> */}
-                <OrderNow/>
-             <CallToAction/>
 
-             <Footer/>
+            <WhyChooseMFCs />
+
+            {/* team section */}
+
+
+            {/* <Objectives/> */}
+            {/* <Benefits/> */}
+            <OrderNow />
+            <FAQSection />
+            <CallToAction />
+
+            <Footer />
         </div>
 
     );

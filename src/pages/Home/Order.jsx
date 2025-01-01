@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const OrderNow = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-700 to-green-400 text-white text-center">
+       <div className="p-4 ">
+         <section className="py-16 bg-gradient-to-br rounded-lg from-blue-700 to-green-400 text-white text-center">
       <div className="max-w-4xl mx-auto px-6">
         <motion.h2
           className="text-4xl font-extrabold"
@@ -40,6 +41,7 @@ const OrderNow = () => {
         </motion.div>
       </div>
     </section>
+       </div>
   );
 };
 
