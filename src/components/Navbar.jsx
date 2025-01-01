@@ -9,7 +9,7 @@ const Navbar = () => {
   const handleToggle = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="bg-blue-700 text-white sticky top-0 z-50 shadow-md">
+    <nav className="bg-[#29615a] text-white sticky top-0 z-50 shadow-md py-4 ">
       <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -66,7 +66,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-blue-700 text-center">
+        <div className="lg:hidden bg-green-500 text-center">
           <ul className="space-y-4 py-4">
             <li>
               <NavLink

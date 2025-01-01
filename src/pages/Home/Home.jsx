@@ -11,7 +11,7 @@ import Footer from "../../components/Footer";
 const Home = () => {
     return (
         <div className="w-full">
-            <div className="sticky top-0 z-50 w-full">
+            <div className="sticky top-0 z-10 w-full">
             <StickyNavbar/>
             </div>
             <div>
@@ -25,7 +25,7 @@ const Home = () => {
                             initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
-                            className="text-4xl md:text-6xl font-extrabold text-white"
+                            className="text-4xl md:text-6xl font-extrabold text-white px-4"
                         >
                             Harnessing Wastewater for Clean Energy
                         </motion.h1>
@@ -38,12 +38,14 @@ const Home = () => {
                             Transforming organic waste into renewable energy and purified water
                             through cutting-edge microbial fuel cell technology.
                         </motion.p>
-                        <motion.button
+                       <div className="mt-16">
+                       <motion.button
                             whileHover={{ scale: 1.1 }}
-                            className="mt-6 px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-200"
+                            className="mt-6 px-6 py-4 bg-white text-blue-500 font-semibold rounded-lg shadow-lg hover:bg-gray-200"
                         >
                             Learn More
                         </motion.button>
+                       </div>
                     </div>
                 </div>
             </div>
@@ -64,9 +66,11 @@ const Home = () => {
       to global challenges, reducing pollution, conserving resources, 
       and paving the way for a greener future.
     </p>
-    <button className="mt-8 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+     <div  className="mt-8">
+     <button className="mt-8 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
       Learn More
     </button>
+     </div>
   </div>
 </div>
        {/* why */}

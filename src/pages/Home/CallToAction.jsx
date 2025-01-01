@@ -1,6 +1,6 @@
 const CallToAction = () => {
     return (
-      <div className="bg-blue-700 py-12 text-center text-white">
+      <div className="bg-gray-100 py-24 text-center mt-2 mb-2">
         <h2 className="text-3xl font-bold mb-4">
           Join Us in Revolutionizing Clean Energy
         </h2>
